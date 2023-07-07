@@ -1,19 +1,28 @@
+const form=document.getElementById('form');
+const username=document.getElementById('name');
+const pass=document.getElementById('psw');
+const errorname=document.querySelector(".showmessagename");
+const errorpass=document.querySelector(".showmessagepass");
 
-function verification(){
-  let name=document.getElementsByName("name")[0];
-  let pass=document.getElementsByName("psw")[0];
-  let errorname=document.querySelector(".showmessagename");
-  let errorpass=document.querySelector(".showmessagepass");
-  if (name.value==""){
-    errorname.textContent="Please Enter Username";
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  console.log('clicked');
+
+  if (username.value == ""){
+    errorname.textContent='Please Enter Username';
   }
-  if (pass.value==""){
-    errorpass.textContent="Please Enter Password";
+  if (pass.value == ""){
+    errorpass.textContent='Please Enter Password';
   }
-   if (name.value && pass.value){
-    alert("hello");
-    errorname.textContent="";
-    errorpass.textContent="";
-    
+  if (pass.value && pass.value.length <8){
+    errorpass.textContent='Password must be 8-20 character';
   }
-}
+
+  if(username.value && pass.value && pass.value.length >8 ){
+    errorpass.textContent='';
+    errorname.textContent='';
+    alert("Hello "+ username.value)
+  }
+ 
+});

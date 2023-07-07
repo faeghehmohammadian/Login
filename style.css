@@ -37,6 +37,7 @@
     flex-basis: 100%;
     margin: 10px;
     font-size: 2em;
+    background-color: #c7c8e7;
 }
 .showmessagename,
 .showmessagepass{
@@ -87,7 +88,11 @@ button {
         margin-top: 140px;
         }
         .loginheader{
-            flex-basis: 0;
+            flex-basis:0;
+            width: 80%;
+            display: flex;
+            justify-content: center;
         }
+
         
 }
