@@ -13,20 +13,21 @@
       
         <div >
           <img class="iconimg">
-          <form class="myForm" >
+          <form class="form" method="dialog">
             <div class="mainbox">
+              <div class="loginheader">login</div>
               <div class="nameclass">
-                
-                <label ><b>Username:</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" value="">
-              
+                <label><b>Username:</b></label>
+                <input type="text" placeholder="Enter Username" name="name" value="">
+                <div class="showmessagename"></div>
               </div>
               <div class="passwordclass">
-                <label ><b>Password:</b></label>
-                <input type="password" placeholder="Enter Password"  name="psw" >
+                <label><b>Password:</b></label>
+                <input type="password" placeholder="Enter Password"  name="psw" value="">
+                <div class="showmessagepass"></div>
               </div> 
-              <div  class="loginclass">  
-                <button onclick="VF()">Login</button>
+              <div class="loginclass">  
+                <button class="clicklog" onclick="verification()">Login</button>
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>
